@@ -1,0 +1,45 @@
+body {
+    background-color: #333; /* Dark background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    background-color: #222; /* Darker background color for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 500px;
+  }
+  
+  .login-form {
+    color: #0a0; /* Green text color */
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"],
+  .login-form input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .login-form input[type="submit"] {
+    background-color: #0a0; /* Green button background color */
+    color: white;
+    cursor: pointer;
+  }
+  
