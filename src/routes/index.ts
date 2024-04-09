@@ -4,7 +4,8 @@ import { authController } from "../controllers/auth";
 import { User } from "../@types/user";
 import axios from "axios";
 import { sign } from "jsonwebtoken";
-var needle = require('needle');
+import needle from "needle";
+
 const fs = require('fs').promises; // Using fs.promises for asynchronous file operations
 
 
@@ -191,7 +192,8 @@ router.get('/users/:id', (req: Request, res: Response) => {
                     res.write('body { background-color: black; color: #0a0; }\n');
                     res.write('</style>\n</head>\n<body>\n');
                     res.write('<h1>Welcome to check url feature!</h1>\n\n');
-                    res.write('<h2>I am an application. I want to be useful, so I requested: <font color="red">' + url + '</font> for you\n</h2><br><br>\n\n\n');
+                    const teste = 'url'
+                    res.write('<h2>I am an application. I want to be useful, so I requested: <font color="red">' + teste + '</font> for you\n</h2><br><br>\n\n\n');
                     console.log(res1.body);
                     res.write(res1.body);
                     res.write('\n</body>\n</html>');
