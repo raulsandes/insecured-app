@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get the form input values
         const name = document.getElementById('name').value;
         const password = document.getElementById('password').value;
+        window.location.href = '/home'; // Redirect to the home page
 
         // Send a POST request to the login endpoint
         fetch('/login', {
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ name, password })
+            
         })
         .then(response => {
             if (!response.ok) {
@@ -30,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('jwtToken', jwtToken);
 
             // Redirect to another page or perform other actions
-            window.location.href = '/home'; // Redirect to the home page
         })
         .catch(error => {
             console.error('Error:', error);
