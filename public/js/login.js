@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.querySelector('form[action="/api/login"]');
+    const loginForm = document.querySelector('form[action="/login"]');
 
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('jwtToken', jwtToken);
 
             // Redirect to another page or perform other actions
-            window.location.href = '/api/home'; // Redirect to the home page
+            window.location.href = '/home'; // Redirect to the home page
         })
         .catch(error => {
             console.error('Error:', error);
