@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Get the form input values
         const name = document.getElementById('name').value;
         const password = document.getElementById('password').value;
-        window.location.href = '/home'; // Redirect to the home page
 
         // Send a POST request to the login endpoint
         fetch('/login', {
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ name, password })
-            
         })
         .then(response => {
             if (!response.ok) {
@@ -26,12 +24,15 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(data => {
             // Assuming the server responds with a JWT token in 'token' field
-            const jwtToken = data.token;
 
-            // Set the JWT token in localStorage
-            localStorage.setItem('jwtToken', jwtToken);
+            if (data.token && data.redirectTo) {
+                // Save token to local storage or session storage if needed
+                const jwtToken = data.token;
 
-            // Redirect to another page or perform other actions
+                localStorage.setItem('jwtToken', jwtToken);
+                // Redirect the user to the specified route
+                window.location.href = data.redirectTo;
+              }
         })
         .catch(error => {
             console.error('Error:', error);

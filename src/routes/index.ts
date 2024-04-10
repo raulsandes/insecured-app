@@ -64,7 +64,9 @@ router.post("/login", (req: Request, res: Response) => {
     // localStorage.setItem('jwtToken', token);
 
 
-    return res.status(200).json({ token });
+    return res.status(200).json({ token, redirectTo: "/home" });
+
+
 });
 
 // views
