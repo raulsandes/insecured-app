@@ -46,7 +46,7 @@
 
 <body>
   <div class="login-container">
-    <form action="/api/login" method="post" class="login-form">
+    <form action="/login" method="post" class="login-form">
       <label for="name">Name:</label>
       <input id="name" name="name" type="text" placeholder="Enter your name...">
       <label for="password">Password:</label>
@@ -54,8 +54,8 @@
       <input type="submit" value="Login">
     </form>
   </div>
-  <!-- TODO whitelist for this route 
-curl "http://domain/api/read-file?path=/" -->
+  <!-- TODO Ajust for this route to check on FILES
+curl "http://domain/read-file?path=/" -->
 
 
   <!-- {
@@ -65,9 +65,9 @@ curl "http://domain/api/read-file?path=/" -->
     password: "kevin789",
     job: "Shellcoder"
 } 
-**** TO-DO: Ajust Kevin profile on http://domain/api/users/4
+**** TO-DO: Ajust Kevin profile on http://domain/users/4
 
-**** TO-DO: Example: http://domain/api/check-url?url=https:// -->
+**** TO-DO: Example: http://domain/check-url?url=https:// -->
   <script src="/js/login.js"></script>
 </body>
 

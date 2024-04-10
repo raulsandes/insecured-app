@@ -69,11 +69,11 @@ router.post("/login", (req: Request, res: Response) => {
 
 // views
 router.get("/", (_req: Request, res: Response) => {
-    return res.sendFile(join(__dirname, "..", "..", "view", "index.html"))
+    return res.sendFile(join(__dirname, "..", "view", "index.html"))
 });
 
 router.get("/home", (_req: Request, res: Response) => {
-    return res.sendFile(join(__dirname, "..", "..", "view", "home.html"))
+    return res.sendFile(join(__dirname, "..", "view", "home.html"))
 });
 
 
@@ -100,7 +100,7 @@ router.post('/comment', (req: Request, res: Response) => {
         </div>
         <div class="terminal-container">
             <div class="terminal">
-                <form class="prompt" action="/api/comment" method="post">
+                <form class="prompt" action="/comment" method="post">
                     <label for="prompt">~/root #</label>
                     <input name="prompt" id="prompt" class="block" />
                 </form>
@@ -214,7 +214,7 @@ router.get('/users/:id', (req: Request, res: Response) => {
             res.write('</style>\n</head>\n<body>\n');
             res.write('<h1>Welcome to check url feature!</h1>\n\n');
             res.write('<h2>I am an application. I want to be useful, so if you specify the url parameter, I\'ll req the page for you:</h2><br><br>\n\n\n');
-            res.write('<h2>Example: http://domain/api/check-url?url=https://</h2><br><br>\n\n\n');
+            res.write('<h2>Example: http://domain/check-url?url=https://</h2><br><br>\n\n\n');
             res.write('\n</body>\n</html>');
             res.end();
         }
