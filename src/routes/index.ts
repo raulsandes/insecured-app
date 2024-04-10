@@ -1,14 +1,11 @@
 import { Router, Request, Response } from "express";
 import { join } from "node:path";
-import { authController } from "../controllers/auth";
 import { User } from "../@types/user";
-import axios from "axios";
+// import axios from "axios";
 import { sign } from "jsonwebtoken";
 import needle from "needle";
 
 const fs = require('fs').promises; // Using fs.promises for asynchronous file operations
-
-
 
 const router = Router();
 
@@ -72,11 +69,11 @@ router.post("/login", (req: Request, res: Response) => {
 
 // views
 router.get("/", (_req: Request, res: Response) => {
-    return res.sendFile(join(__dirname, "..", "view", "index.html"))
+    return res.sendFile(join(__dirname, "..", "..", "view", "index.html"))
 });
 
 router.get("/home", (_req: Request, res: Response) => {
-    return res.sendFile(join(__dirname, "..", "view", "home.html"))
+    return res.sendFile(join(__dirname, "..", "..", "view", "home.html"))
 });
 
 

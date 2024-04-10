@@ -36,27 +36,29 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/style.css"> <!-- Link to your CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- Link to your CSS file -->
 </head>
+
 <body>
-    <div class="login-container">
-        <form action="/api/login" method="post" class="login-form">
-            <label for="name">Name:</label>
-            <input id="name" name="name" type="text" placeholder="Enter your name...">
-            <label for="password">Password:</label>
-            <input id="password" name="password" type="password" placeholder="Enter your password...">
-            <input type="submit" value="Login">
-        </form>
-    </div>
-    <!-- TODO whitelist for this route 
+  <div class="login-container">
+    <form action="/api/login" method="post" class="login-form">
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" placeholder="Enter your name...">
+      <label for="password">Password:</label>
+      <input id="password" name="password" type="password" placeholder="Enter your password...">
+      <input type="submit" value="Login">
+    </form>
+  </div>
+  <!-- TODO whitelist for this route 
 curl "http://domain/api/read-file?path=/" -->
 
 
-<!-- {
+  <!-- {
     id: 4,
     name: "Kevin",
     cpf: 101010101,
@@ -66,6 +68,7 @@ curl "http://domain/api/read-file?path=/" -->
 **** TO-DO: Ajust Kevin profile on http://domain/api/users/4
 
 **** TO-DO: Example: http://domain/api/check-url?url=https:// -->
-<script src="/js/login.js"></script>
+  <script src="/js/login.js"></script>
 </body>
+
 </html>
