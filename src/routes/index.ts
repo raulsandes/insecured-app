@@ -71,6 +71,7 @@ router.post("/login", (req: Request, res: Response) => {
 
 // views
 router.get("/", (_req: Request, res: Response) => {
+    console.log("GET RESQUEST BEING MADE")
     return res.sendFile(join(__dirname, "..", "view", "index.html"))
 });
 
